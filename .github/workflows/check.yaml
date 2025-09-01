@@ -34,6 +34,9 @@ jobs:
         run: |
           lune -V
           which lune
+          echo $PATH
+          echo "---"
+          echo $GITHUB_PATH
 
       - name: StyLua
         run: |
