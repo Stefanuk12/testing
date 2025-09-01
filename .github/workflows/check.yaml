@@ -26,6 +26,7 @@ jobs:
         run: |
           lune -V
           pesde install
+          echo "$HOME/.pesde/bin" >> $GITHUB_PATH
 
       - name: StyLua
         run: |
