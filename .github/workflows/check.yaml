@@ -26,6 +26,7 @@ jobs:
         shell: bash
         run: |
           source ~/.bashrc
+          ls $HOME/.pesde/bin
           lune -V
           pesde install
           
