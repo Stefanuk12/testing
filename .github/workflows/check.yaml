@@ -23,9 +23,10 @@ jobs:
           cache: true
 
       - name: Install dependencies
+        shell: bash
         run: |
+          source ~/.bashrc
           lune -V
-          echo "$HOME/.pesde/bin" >> $GITHUB_PATH
           pesde install
           
 
