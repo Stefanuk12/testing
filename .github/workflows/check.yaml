@@ -24,6 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
+          mkdir -p $HOME/.pesde/bin/.tool_storage
           chmod -R 777 $HOME
           pesde install
 
