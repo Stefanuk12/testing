@@ -32,7 +32,7 @@ jobs:
 
       - name: Post install testing
         run: |
-          export PATH="$PATH:$HOME/.pesde/bin"
+          export PATH="$HOME/.pesde/bin:$PATH:$HOME/.pesde/bin"
           lune -V
           which lune
           echo $PATH
