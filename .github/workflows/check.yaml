@@ -17,6 +17,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Pre-install
+        run: |
+          echo "$PATH"
+
       - name: Install Pesde
         uses: lumin-org/setup-pesde@v0.4.1
         with:
@@ -25,9 +29,6 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
-          source ~/.bashrc
-          ls $HOME/.pesde/bin
-          lune -V
           pesde install
 
       - name: Post install testing
