@@ -29,13 +29,14 @@ jobs:
           ls $HOME/.pesde/bin
           lune -V
           pesde install
-          
 
-      - name: StyLua
+      - name: Post install testing
         run: |
           lune -V
           which lune
-          ls $HOME/.pesde/bin
+
+      - name: StyLua
+        run: |
           ~/.pesde/bin/stylua -V
           stylua=$(find ~/.pesde/bin/.tool_storage -type f -name 'stylua*' -printf '%T@ %p\n' | sort -nr | head -n1 | cut -d' ' -f2-)
           "$stylua" -f .meta/.stylua.toml --color always --check src
