@@ -17,25 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Pre-install
-        run: |
-          echo "$PATH"
-
       - name: Install Pesde
         uses: lumin-org/setup-pesde@b690699ace34169731b6b2a1c93b2008472038a7
         with:
           cache: true
 
       - name: Install dependencies
-        shell: bash
-        run: |
-          echo "$PATH"
-          pesde install
-
-      - name: Post install testing
-        run: |
-          echo "$PATH"
-          lune -V
+        run: pesde install
 
       - name: StyLua
         run: |
