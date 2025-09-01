@@ -23,7 +23,9 @@ jobs:
           cache: true
 
       - name: Install dependencies
-        run: pesde install
+        run: |
+          chmod 777 $HOME
+          pesde install
 
       - name: StyLua
         run: |
