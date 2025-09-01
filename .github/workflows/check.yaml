@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          chmod 777 $HOME
+          chmod -R 777 $HOME
           pesde install
 
       - name: StyLua
