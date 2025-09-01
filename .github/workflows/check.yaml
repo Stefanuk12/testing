@@ -32,12 +32,9 @@ jobs:
 
       - name: Post install testing
         run: |
-          export PATH="$HOME/.pesde/bin:$PATH:$HOME/.pesde/bin"
+          echo -e "$HOME/.pesde/bin" >> $GITHUB_PATH
+          echo "$PATH"
           lune -V
-          which lune
-          echo $PATH
-          echo "---"
-          echo $GITHUB_PATH
 
       - name: StyLua
         run: |
